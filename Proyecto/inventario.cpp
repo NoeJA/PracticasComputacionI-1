@@ -46,14 +46,15 @@ void inventario::setSell(float cost_sell ){
 //Tenemos los 4 vectores: articulo, cantidad, costo y  precio de venta
 void inventario::printInv(){
     //Imprime los encabezados
-    cout<<"|"<<"Articulos"<<"\t"<<"No. Articulos"<<"\t"<<"Costo compra"<<"\t"<<"Costo venta"<<"\t"<<"|"<<endl;
+    cout<<"|"<<"Indice"<<" "<<"Articulos"<<"\t"<<"No. Articulos"<<"\t"<<"Costo compra"<<"\t"<<"Costo venta"<<"\t"<<"|"<<endl;
     //Imprime una linea divisoria
-    cout<<"------------------------------------------------------------------"<<endl;
+    cout<<"|------------------------------------------------------------------------|"<<endl;
     //Imprime los elementos de los cuatro vectores de datos, en orden descendente para aparentar una tabla
     for (int i=0; i<articleVec.size();i++ ){
-        cout<<"|"<<i<<"\t"<<articleVec[i]<<"\t"<<nArticles[i]<<"\t"<<Cost[i]<<"\t"<<Sell[i]<<"\t"<<"|"<<endl;
+        cout<<"|"<<i<<"        "<<articleVec[i]<<"\t\t"<<nArticles[i]<<"\t\t"<<Cost[i]<<"\t\t"<<Sell[i]<<"\t\t"<<"|"<<endl;
     }
 }
+
 
 //Calcula ganancia con base en los costos de compra y venta
 float inventario::calcGain(){
